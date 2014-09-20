@@ -8,6 +8,7 @@
     <body>
         <h1>Feed Me!</h1>
         <form action="" method="POST">
+            {% csrf_token %}
             <input type="text">
             <br>
             <input type="submit" value="Quickly! To the server!">

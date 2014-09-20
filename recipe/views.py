@@ -19,7 +19,7 @@ def index(request):
 
 def showrecipe(request):
 	if request.method != 'POST':
-		return
+		return HttpResponse("Method didn't equal post")
 	rstr = "http://api.yummly.com/v1/api/recipes?_app_id=8397ddf3&_app_key=5ddd5532a314c79efcb9e7cede1b98a5"
 	for key in request.POST :
 		rstr += "&allowedIngredient[]="
