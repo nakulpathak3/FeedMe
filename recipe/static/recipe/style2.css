@@ -1,16 +1,19 @@
 * { Box-sizing: Border-box }
 body{
-	background-image:linear-gradient(315deg, hsl(208, 99%, 56%), hsl(119, 86%, 62%));
+	background-image:linear-gradient(315deg, hsl(208, 99%, 56%), hsl(119, 86%, 62%)); background-attachment: fixed;
+}
+html{
+    height: 100%;
 }
 
-#firstnameholder{
-	margin-top: 10%;
+.recipies-wrapper{
+    margin: 1em auto;
+    max-width: 600px;
 }
+
 .nameholder{
 	background: rgba(255,255,255, 0.6);
-	height: 20%;
-	max-width: 70%;
-	margin: 0 auto;
+	margin: 1em auto;
 	border: 2px solid #555555;
 }
 

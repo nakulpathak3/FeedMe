@@ -1,74 +1,72 @@
 <!DOCTYPE html>
-<head>
-	<title>
-	Recipes Ready	
-	</title>
+<html>
+	<head>
+		<title>Recipes Ready</title>
+		<link rel="stylesheet" type="text/css" href="../../static/recipe/style2.css" />
+		<script type="text/javascript" src="../../static/recipe/script.js"></script>
+	</head>
 
-<link rel="stylesheet" type="text/css" href="../../static/recipe/style2.css" />
-<script type="text/javascript" src="../../static/recipe/script.js"></script>
-</head>
+	<body>
+		<div class="recipies-wrapper">
+			<div class="nameholder" id="firstnameholder">
+				<img class="thumbnails" src= {{ picture1 }}>
 
-<body>
-	<div class="nameholder" id="firstnameholder">
-		<img class="thumbnails" src= {{ picture1 }}>
-
-		<h2 class="recipenames">{{ recipename1 }}</h2>
-		<div class="recipe">
-			<ul>
-				<li>Rating is {{ rating1 }} out of 5</li>
-				<li>
-					Ingredients are:
+				<h2 class="recipenames">{{ recipename1 }}</h2>
+				<div class="recipe">
 					<ul>
-					{% for i in ingredients1 %}
-						<li>{{ i }}</li>
-					{% endfor %}
+						<li>Rating is {{ rating1 }} out of 5</li>
+						<li>
+							Ingredients are:
+							<ul>
+							{% for i in ingredients1 %}
+								<li>{{ i }}</li>
+							{% endfor %}
+							</ul>
+						</li>
+						<li><a href={{ link1 }}>Click here!</a></li>
 					</ul>
-				</li>
-				<li><a href={{ link1 }}>Click here!</a></li>
-			</ul>
+				</div>
+			</div>
+			
+			<div class="nameholder">
+				<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
+
+				<h2 class="recipenames">Recipename2</h2>
+				<div class="recipe">
+					<ul>
+						<li>Take the chicken out of the fridge</li>
+						<li>Eat it</li>
+						<li>Now eat vegetables</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nameholder">
+				<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
+
+				<h2 class="recipenames">Recipename3</h2>
+				<div class="recipe">
+					<ul>
+						<li>thing1</li>
+						<li>thing2</li>
+						<li>thing3</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nameholder">
+				<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
+				<h2 class="recipenames">Chicken With Vegetables.</h2>
+				<div class="recipe">
+					<ul>
+						<li>Take the chicken out of the fridge</li>
+						<li>Eat it</li>
+						<li>Now eat vegetables</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
-	
-	<div class="nameholder">
-		<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
 
-		<h2 class="recipenames">Recipename2</h2>
-		<div class="recipe">
-			<ul>
-				<li>Take the chicken out of the fridge</li>
-				<li>Eat it</li>
-				<li>Now eat vegetables</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="nameholder">
-		<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
-
-		<h2 class="recipenames">Recipename3</h2>
-		<div class="recipe">
-			<ul>
-				<li>thing1</li>
-				<li>thing2</li>
-				<li>thing3</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="nameholder">
-		<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
-		<h2 class="recipenames">Chicken With Vegetables.</h2>
-		<div class="recipe">
-			<ul>
-				<li>Take the chicken out of the fridge</li>
-				<li>Eat it</li>
-				<li>Now eat vegetables</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-{{ html }}
-	
-
-</body>
+	</body>
+</html>
