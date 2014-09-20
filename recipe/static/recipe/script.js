@@ -1,4 +1,4 @@
-
+/*
 $(document).ready(function() {
 //accordion
 	
@@ -10,3 +10,4 @@ $(document).ready(function() {
 });
 
 });
+*/

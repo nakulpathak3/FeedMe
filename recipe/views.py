@@ -21,30 +21,27 @@ def index(request):
 def showrecipe(request):
 	if request.method != 'POST':
 		return HttpResponse("Method didn't equal post")
-	else:
-		check = request.POST
-		return HttpResponse(check.get("ingredient"))
+	
+	#check = request.POST
+	#return HttpResponse(check.get("ingredient"))
 
-	#rstr = "http://api.yummly.com/v1/api/recipes?_app_id=8397ddf3&_app_key=5ddd5532a314c79efcb9e7cede1b98a5"
-	#for key in request.POST :
-		#check += key
-		#check += "1"
-		#if key == "allowedIngredient[]" :
-			#rstr += "&allowedIngredient[]="
-			#rstr += request.POST[key]
-	#r = requests.get(rstr)
-	#yummly = r.json()
+	rstr = "http://api.yummly.com/v1/api/recipes?_app_id=8397ddf3&_app_key=5ddd5532a314c79efcb9e7cede1b98a5"
+	for key in request.POST :
+		if len(key) >= 10 and key[:10] == "ingredient" :
+			rstr += "&allowedIngredient[]="
+			rstr += request.POST[key]
+	r = requests.get(rstr)
+	yummly = r.json()
 
-	#recipes = yummly["totalMatchCount"]
-	#sample = recipes[0]
+	recipes = yummly["matches"]
+	sample = recipes[0]
 
-	"""
 	template = loader.get_template('recipe/page2.html')
 	context = RequestContext(request, {  
-		'latest_question_list': latest_question_list,
+		'recipename1': sample["recipeName"],
 	})
 	return HttpResponse(template.render(context))
-	"""
+	
 	"""
 	4 recipes
 	name
@@ -53,4 +50,3 @@ def showrecipe(request):
 	ingredients
 	link
 	"""
-	#return HttpResponse(yummly["attribution"]["html"])
