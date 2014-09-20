@@ -21,18 +21,21 @@ def index(request):
 def showrecipe(request):
 	if request.method != 'POST':
 		return HttpResponse("Method didn't equal post")
-	rstr = "http://api.yummly.com/v1/api/recipes?_app_id=8397ddf3&_app_key=5ddd5532a314c79efcb9e7cede1b98a5"
-	check = ""
-	for key in request.POST :
-		check += key
-		check += "1"
-		if key == "allowedIngredient[]" :
-			rstr += "&allowedIngredient[]="
-			rstr += request.POST[key]
-	r = requests.get(rstr)
-	yummly = r.json()
+	else:
+		check = request.POST
+		return HttpResponse(check.get("ingredient"))
 
-	recipes = yummly["totalMatchCount"]
+	#rstr = "http://api.yummly.com/v1/api/recipes?_app_id=8397ddf3&_app_key=5ddd5532a314c79efcb9e7cede1b98a5"
+	#for key in request.POST :
+		#check += key
+		#check += "1"
+		#if key == "allowedIngredient[]" :
+			#rstr += "&allowedIngredient[]="
+			#rstr += request.POST[key]
+	#r = requests.get(rstr)
+	#yummly = r.json()
+
+	#recipes = yummly["totalMatchCount"]
 	#sample = recipes[0]
 
 	"""
@@ -50,5 +53,4 @@ def showrecipe(request):
 	ingredients
 	link
 	"""
-	return HttpResponse(check)
 	#return HttpResponse(yummly["attribution"]["html"])

@@ -1,15 +1,17 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Recipes For All</title>
-        <link rel="stylesheet/css" src="">
+        <link rel="stylesheet" type="text/css" href="{% static 'recipe/style.css'%}">
     </head>
 
     <body>
         <h1>Feed Me!</h1>
         <form action="http://localhost:8000/recipe" method="POST">
             {% csrf_token %}
-            <input type="text">
+            <input type="text" name="ingredient">
             <br>
             <input type="submit" value="Quickly! To the server!">
         </form>
