@@ -7,11 +7,11 @@
     </head>
 
 	<body>
-		<div class="recipies-wrapper" id="menu">
-		{% for r in storedvalues %}
-		<h3 class="recipenames" class="nameholder" id="firstnameholder"> {{ r.name }} </h3>
+		<div class="recipes-wrapper">
+		{% for r in storedvalues %}<img class="thumbnails" src= "{{ r.picture }}">
+		
+		<h1 class="accordion"> {{ r.name }} </h1>
 			<div class="recipe">
-				<img class="thumbnails" src= "{{ r.picture }}">
 				<ul>
 					<li>Rating is {{r.rating}} out of 5</li>
 					<li>

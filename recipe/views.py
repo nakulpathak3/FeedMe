@@ -15,6 +15,7 @@ def index(request):
 	return HttpResponse(yummly["attribution"]["html"])"""
 	template = loader.get_template('recipe/index.html')
 	context = RequestContext(request, {  
+		'storedvalues' : storedvalues,
 	})
 	return HttpResponse(template.render(context))
 
@@ -44,11 +45,10 @@ def showrecipe(request):
 		storedvalues.append(current)
 
 	template = loader.get_template('recipe/page2.html')
+
 	context = RequestContext(request, {  
 		'storedvalues' : storedvalues,
 	})
-	
-	template = loader.get_template('recipe/page2.html')
 	
 	"""
 	context = RequestContext(request, {  

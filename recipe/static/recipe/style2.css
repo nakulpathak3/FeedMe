@@ -6,23 +6,24 @@ html{
     height: 100%;
 }
 
-.recipies-wrapper{
-    margin: 1em auto;
-    max-width: 600px;
+.accordion{
+	font-size: 130%;
 }
-
-#menu {
-	height: 10%;
+.recipes-wrapper {
+	height: 15%;
 	margin: 10% auto 0 auto;
 	background: rgba(255,255,255, 0.6);	
 	border-left: 6px solid rgb(200,100,100);
 }
 
-#menu .ui-accordion-content{
+.recipe{
 	background: rgba(255,255,255, 0.6);
 	border-left: 6px solid rgb(200,100,100);
+	border-bottom: 10px solid rgb(100,150,220);
+	cursor:pointer
 }
 
 .thumbnails{
 	margin: 1% 2% 2% 2%;
 }
+
