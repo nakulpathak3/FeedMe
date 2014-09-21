@@ -44,9 +44,8 @@ def showrecipe(request):
 		storedvalues.append(current)
 
 	template = loader.get_template('recipe/page2.html')
-	context['loop-times'] = RequestContext(request, {  
+	context = RequestContext(request, {  
 		'storedvalues' : storedvalues,
-		'bottomhtml' : yummly["attribution"]["html"],
 	})
 	
 	template = loader.get_template('recipe/page2.html')

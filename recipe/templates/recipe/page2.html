@@ -11,7 +11,7 @@
 		{% for r in storedvalues %}
 		<h3 class="recipenames" class="nameholder" id="firstnameholder"> {{ r.name }} </h3>
 			<div class="recipe">
-				<img class="thumbnails" src= "{{pictures}}">
+				<img class="thumbnails" src= "{{ r.picture }}">
 				<ul>
 					<li>Rating is {{r.rating}} out of 5</li>
 					<li>
@@ -25,9 +25,9 @@
 					<li><a href="{{ r.link }}">Click here!</a></li>
 				</ul>
 			</div>
-			{% endfor %}
+		{% endfor %}
 		</div>
-		{{ bottomhtml }}
+	Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script src="../../static/recipe/script.js"></script>
