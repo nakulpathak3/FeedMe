@@ -7,4 +7,5 @@ $('.accordion').click(function() {
     check = (el.is(':visible')) ? el.slideUp() : ($('.recipe').slideUp()) (el.slideDown());
 });
 
+$('.stars').raty({ score: 3 });
 });
