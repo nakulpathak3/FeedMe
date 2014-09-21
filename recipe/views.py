@@ -24,9 +24,10 @@ def showrecipe(request):
 	
 	rstr = "http://api.yummly.com/v1/api/recipes?_app_id=8397ddf3&_app_key=5ddd5532a314c79efcb9e7cede1b98a5"
 	for key in request.POST :
-		if len(key) >= 10 and key[:10] == "ingredient" :
+		if len(key) >= 10 and key[:10] == "ingredient" and request.POST[key] != "":
 			rstr += "&allowedIngredient[]="
 			rstr += request.POST[key]
+	
 	r = requests.get(rstr)
 	yummly = r.json()
 
@@ -49,15 +50,4 @@ def showrecipe(request):
 		'storedvalues' : storedvalues,
 	})
 	
-	"""
-	context = RequestContext(request, {  
-		'recipename1': "Caramelized Onion Dip",
-		'picture1' : "http://lh6.ggpht.com/Y7bgTZe43hhFOQWDTnDa991bt0NpA9GmY0AZRBum2nsbkRPZXh9pdYf0bm6RSj7x8NRlds_Dmnyfwy_bu4AkaA8=s90",
-		'rating1' : 5,
-		'ingredients1' : ["unsalted butter","sandwich bread","bacon","shredded cheddar cheese","large eggs","pepper","salt"],
-		'link1' : "http://www.yummly.com/recipe/Caramelized-onion-dip-308832",
-		'bottom html' : "Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>",
-	})
-	"""
 	return HttpResponse(template.render(context))
-	
