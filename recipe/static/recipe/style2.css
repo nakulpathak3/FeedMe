@@ -27,7 +27,8 @@ ul{
 }
 
 .footnote{
-	margin-top: 10%;
+	margin: 2em auto;
+	text-align: center;
 }
 
 .recipe{
