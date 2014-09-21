@@ -1,6 +1,6 @@
 * { Box-sizing: Border-box }
 body{
-	background:#74AFAD; background-attachment: fixed;
+	background-image:linear-gradient(315deg, hsl(208, 99%, 56%), hsl(119, 86%, 62%)); background-attachment: fixed;
 }
 
 html{
@@ -10,9 +10,9 @@ html{
 .recipes-wrapper{
 	font-family: arial;
 	width: 75%;
-	margin: 1% auto -0.5% auto;
+	margin: 0.5em auto 0.5em auto;
 	color: white;
-	border: 2px solid white;
+	border: 2px solid rgba(255,255,255,0.8);
 	cursor: pointer;
 	color: black;
 	background-color: rgba(255,255,255,0.8);
@@ -30,8 +30,9 @@ html{
 }
 
 .accordion{
-	margin-top: -5.5%;
-	margin-left: 11%;
+	max-width: 75%;
+	position: relative;
+	float: right;
 }
 
 .thumbnails{

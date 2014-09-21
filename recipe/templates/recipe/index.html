@@ -11,6 +11,7 @@
         <div class="main-content-wrapper">
             <h1>Feed Me!</h1>
             <div class="information-wrapper">
+                <p>What ingredients do you have?</p>
                 <form action="http://localhost:8000/recipe/" method="POST">
                     {% csrf_token %}
 
@@ -22,7 +23,7 @@
                     <br>
 
                     <div class="submit">
-                        <input type="submit" value="Quickly! To the server!">
+                        <input type="submit" value="Find Me Recipes!">
                     </div>
                 </form>
             </div>

@@ -10,10 +10,10 @@
 	<body>
 		{% for r in storedvalues %}
 		<div class="recipes-wrapper">
-		<img class="thumbnails" src= "{{ r.picture }}">
-		<div id="stars"></div>
-		<h2 class="accordion"> {{ r.name }} </h1>
-			<div class="recipe">
+			<img class="thumbnails" src= "{{ r.picture }}">
+			<h2 class="accordion"> {{ r.name }} </h2>
+			<div id="stars"></div>
+			<div class="recipe off">
 				<ul>
 					<li>Rating is {{r.rating}} out of 5</li>
 					<li>
