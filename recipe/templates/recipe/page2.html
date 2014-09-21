@@ -3,15 +3,16 @@
 	<head>
 		<title>Recipes Ready</title>
 		<link rel="stylesheet" type="text/css" href="../../static/recipe/style2.css" />
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">	
-    </head>
+		<script type="text/javascript" src="../../static/recipe/script.js"></script>
+	</head>
 
 	<body>
-		<div class="recipies-wrapper" id="menu">
-				
-				<h3 class="recipenames" class="nameholder" id="firstnameholder"><!--{% for recipenames in matches[sourceDisplayName] %}-->Heading</h3>
-				<div class="recipe">
+		<div class="recipies-wrapper">
+			<div class="nameholder" id="firstnameholder">
 				<img class="thumbnails" src= {{ picture1 }}>
+
+				<h2 class="recipenames">{{ recipename1 }}</h2>
+				<div class="recipe">
 					<ul>
 						<li>Rating is {{ rating1 }} out of 5</li>
 						<li>
@@ -25,28 +26,47 @@
 						<li><a href={{ link1 }}>Click here!</a></li>
 					</ul>
 				</div>
-			<!--{% endfor %} -->
+			</div>
 			
-			<h3 class="recipenames">Toasty Peanut Butter With Garlic</h3>
-			<!--<img class="thumbnails" src= {{ picture1 }}> -->
+			<div class="nameholder">
+				<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
+
+				<h2 class="recipenames">Recipename2</h2>
 				<div class="recipe">
-					<!--<ul>
-						<li>
-							<ul>
-								<li>Peanut Butter</li>
-								<li>Chicken Curry</li>
-								<li>Garlic</li>
-								<li>Toast</li>
-							</ul>
-						</li>
-						<li><a href={{ link1 }}>Click here!</a></li>
-					</ul>-->
-					<p>Dog</p>
+					<ul>
+						<li>Take the chicken out of the fridge</li>
+						<li>Eat it</li>
+						<li>Now eat vegetables</li>
+					</ul>
 				</div>
+			</div>
+
+			<div class="nameholder">
+				<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
+
+				<h2 class="recipenames">Recipename3</h2>
+				<div class="recipe">
+					<ul>
+						<li>thing1</li>
+						<li>thing2</li>
+						<li>thing3</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nameholder">
+				<img class="thumbnails" src="http://lh5.ggpht.com/-V5l5ar0KFj2EWgivuFLdBPLAD9vaD-jU276p1jA-OUSOZpWWUZWeAlVPaP5AX6FuW9VzXizWM9kyJZBXnBYOQ=s90">
+				<h2 class="recipenames">Chicken With Vegetables.</h2>
+				<div class="recipe">
+					<ul>
+						<li>Take the chicken out of the fridge</li>
+						<li>Eat it</li>
+						<li>Now eat vegetables</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-    <script src="../../static/recipe/script.js"></script>
+	</div>
 
 	</body>
 </html>
