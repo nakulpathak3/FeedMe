@@ -31,28 +31,22 @@ def showrecipe(request):
 	yummly = r.json()
 
 	recipes = yummly["matches"]
-	recipenames = []
-	pictures = []
-	ratings = []
-	ingredients = []
-	links = []
+	storedvalues = []
 
-	for i in recipies :
+	for i in range(0, len(recipes)) : #i is an integer
 		recipe = recipes[i]
-		recipenames[i] = recipe["recipeName"],
-		pictures[i] = recipe["smallImageUrls"][0],
-		ratings[i] = recipe["rating"],
-		ingredients[i] = recipe["ingredients"],
-		links[i] = "http://www.yummly.com/recipe/" + recipe["id"],
+		current = {}
+		current["name"]= recipe["recipeName"]
+		current["picture"]=recipe["smallImageUrls"][0]
+		current["rating"]= recipe["rating"]
+		current["ingredients"]= recipe["ingredients"]
+		current["link"]= "http://www.yummly.com/recipe/" + recipe["id"]
+		storedvalues.append(current)
 
 	template = loader.get_template('recipe/page2.html')
-	context = RequestContext(request, {  
-		'recipenames': recipenames,
-		'pictures' : pictures,
-		'ratings' : ratings,
-		'ingredients' : ingredients,
-		'links' : links,
-		'bottom html' : yummly["attribution"]["html"],
+	context['loop-times'] = RequestContext(request, {  
+		'storedvalues' : storedvalues,
+		'bottomhtml' : yummly["attribution"]["html"],
 	})
 	
 	template = loader.get_template('recipe/page2.html')

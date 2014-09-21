@@ -8,42 +8,26 @@
 
 	<body>
 		<div class="recipies-wrapper" id="menu">
-				
-				<h3 class="recipenames" class="nameholder" id="firstnameholder"><!--{% for recipenames in matches[sourceDisplayName] %}-->Heading</h3>
-				<div class="recipe">
-				<img class="thumbnails" src= {{ picture1 }}>
-					<ul>
-						<li>Rating is {{ rating1 }} out of 5</li>
-						<li>
-							Ingredients are:
-							<ul>
-							{% for i in ingredients1 %}
-								<li>{{ i }}</li>
-							{% endfor %}
-							</ul>
-						</li>
-						<li><a href={{ link1 }}>Click here!</a></li>
-					</ul>
-				</div>
-			<!--{% endfor %} -->
-			
-			<h3 class="recipenames">Toasty Peanut Butter With Garlic</h3>
-			<!--<img class="thumbnails" src= {{ picture1 }}> -->
-				<div class="recipe">
-					<!--<ul>
-						<li>
-							<ul>
-								<li>Peanut Butter</li>
-								<li>Chicken Curry</li>
-								<li>Garlic</li>
-								<li>Toast</li>
-							</ul>
-						</li>
-						<li><a href={{ link1 }}>Click here!</a></li>
-					</ul>-->
-					<p>Dog</p>
-				</div>
+		{% for r in storedvalues %}
+		<h3 class="recipenames" class="nameholder" id="firstnameholder"> {{ r.name }} </h3>
+			<div class="recipe">
+				<img class="thumbnails" src= "{{pictures}}">
+				<ul>
+					<li>Rating is {{r.rating}} out of 5</li>
+					<li>
+						Ingredients are:
+						<ul>
+						{% for j in r.ingredients %}
+							<li>{{ j }}</li>
+						{% endfor %}
+						</ul>
+					</li>
+					<li><a href="{{ r.link }}">Click here!</a></li>
+				</ul>
+			</div>
+			{% endfor %}
 		</div>
+		{{ bottomhtml }}
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script src="../../static/recipe/script.js"></script>
