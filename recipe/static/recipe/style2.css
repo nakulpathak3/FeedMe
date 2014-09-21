@@ -7,12 +7,19 @@ html{
     height: 100%;
 }
 
+ul{
+	padding-bottom: 0.5em;
+}
+
+.off{
+    display: none;
+}
+
 .recipes-wrapper{
 	font-family: arial;
 	width: 75%;
 	margin: 0.5em auto 0.5em auto;
 	color: white;
-	border: 2px solid rgba(255,255,255,0.8);
 	cursor: pointer;
 	color: black;
 	background-color: rgba(255,255,255,0.8);
@@ -33,9 +40,13 @@ html{
 	max-width: 75%;
 	position: relative;
 	float: right;
+	padding-right: 1em;
+	margin: 0.2em 0;
 }
 
 .thumbnails{
+	padding-left: 1em;
+	padding-top: 1em;
 	margin-top: 0;
 	margin-bottom: 0;
 }
