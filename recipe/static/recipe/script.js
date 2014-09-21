@@ -8,8 +8,7 @@ $('.accordion').click(function() {
 });
 
 $('#stars').raty({
-    starOff   : 'star-off.png',
-    starOn    : 'star-on.png',
-    path      : '{{ STATIC_URL }}lib/images' // <-- or wherever your raty images are
+
 });
+
 });
