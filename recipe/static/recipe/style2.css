@@ -11,16 +11,18 @@ html{
     max-width: 600px;
 }
 
-.nameholder{
+#menu {
+	height: 10%;
+	margin: 10% auto 0 auto;
+	background: rgba(255,255,255, 0.6);	
+	border-left: 6px solid rgb(200,100,100);
+}
+
+#menu .ui-accordion-content{
 	background: rgba(255,255,255, 0.6);
-	margin: 1em auto;
-	border: 2px solid #555555;
+	border-left: 6px solid rgb(200,100,100);
 }
 
 .thumbnails{
 	margin: 1% 2% 2% 2%;
-}
-
-.recipenames{
-	margin: -7% 10% 3% 15%;
 }
