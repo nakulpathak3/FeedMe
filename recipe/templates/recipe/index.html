@@ -8,15 +8,27 @@
     </head>
 
     <body>
-        <h1>Feed Me!</h1>
-        <form action="http://localhost:8000/recipe" method="POST">
-            {% csrf_token %}
-            <input type="text" name="ingredient">
-            <br>
-            <input type="submit" value="Quickly! To the server!">
-        </form>
+        <div class="main-content-wrapper">
+            <h1>Feed Me!</h1>
+            <div class="information-wrapper">
+                <form action="http://localhost:8000/recipe/" method="POST">
+                    {% csrf_token %}
 
-        <script src=""></script>
-        <script src=""></script>
+                    <div class="text-field-wrapper old selected last">
+                        <label for="ingredient">Ingredient</label>
+                        <input class="text-field" type="text" name="ingredient0">
+                    </div>
+
+                    <br>
+
+                    <div class="submit">
+                        <input type="submit" value="Quickly! To the server!">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="{% static 'recipe/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'recipe/script1.js' %}"></script>
     </body>
 </html>
