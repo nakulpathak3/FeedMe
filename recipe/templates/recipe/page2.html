@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<title>Recipes Ready</title>
-		<link rel="stylesheet" type="text/css" href="../../static/recipe/style2.css" />
-		<link rel="stylesheet" type="text/css" href="../../static/recipe/lib/jquery.raty.css" />
+    {% load staticfiles %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'recipe/style2.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipe/lib/jquery.raty.css'%}">
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">	
     </head>
 
@@ -32,8 +33,8 @@
 	<p class="footnote">Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a></p>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../static/recipe/lib/jquery.raty.js"></script>
-    <script src="../../static/recipe/script.js"></script>
+    <script src="{% static 'recipe/lib/jquery.raty.min.js' %}"></script>
+    <script src="{% static 'recipe/script.js' %}"></script>
 
 	</body>
 </html>
