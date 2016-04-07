@@ -44,7 +44,7 @@ def showrecipe(request):
 		current["link"]= "http://www.yummly.com/recipe/" + recipe["id"]
 		storedvalues.append(current)
 
-	template = loader.get_template('recipe/page2.html')
+	template = loader.get_template('recipe/results.html')
 
 	context = RequestContext(request, {  
 		'storedvalues' : storedvalues,
