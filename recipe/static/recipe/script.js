@@ -1,9 +1,38 @@
-$(document).ready( function() {
+$(document).ready(function(){
+    var newInputCount = 0;
+
+    function newTFWListner(){
+        $(".text-field-wrapper").click(
+            function(){
+                $(".selected").removeClass("selected");
+                $(this).addClass("selected");
+                newTFWListner();
+            }
+        );
+    }
+
+    function newLCListener(){
+        $(".last").click(
+            function(){
+                if($(this).hasClass("last")){
+                    $(this).removeClass("last");
+                    ++newInputCount;
+                    var newInput = '<div class="text-field-wrapper last"><label for="ingredient">Ingredient</label><input class="text-field" type="text" name="ingredient' + newInputCount + '">';
+                    $(this).after(newInput);
+                    newLCListener();
+                }
+            }
+        );
+    }
+
+    newLCListener();
+    newTFWListner();
 
     $('.accordion').next('.recipe').hide();
 
-    $('.accordion').click(function() {
-        var el = $(this).parent().find('.recipe');
+    $('.recipes-wrapper').click(function() {
+        var el = $(this).children().first();
+        console.log(el);
         if(el.hasClass("off")){
             el.slideDown();
             el.removeClass("off");
@@ -15,4 +44,5 @@ $(document).ready( function() {
             el.addClass("off");
         }
     });
+
 });

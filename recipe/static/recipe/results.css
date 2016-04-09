@@ -1,7 +1,4 @@
 * { Box-sizing: Border-box }
-body{
-	background-image:linear-gradient(315deg, hsl(208, 99%, 56%), hsl(119, 86%, 62%)); background-attachment: fixed;
-}
 
 html{
     height: 100%;
@@ -19,10 +16,9 @@ ul{
 	font-family: arial;
 	width: 75%;
 	margin: 0.5em auto 0.5em auto;
-	color: white;
 	cursor: pointer;
-	color: black;
-	background-color: rgba(255,255,255,0.8);
+	color: #333;
+	border: 1px solid #333;
 	border-radius: 7px;
 }
 
@@ -47,7 +43,8 @@ ul{
 
 .thumbnails{
 	padding-left: 1em;
-	padding-top: 1em;
+	padding-top: 0.8em;
+  padding-bottom: 0.6em;
 	margin-top: 0;
 	margin-bottom: 0;
 }
