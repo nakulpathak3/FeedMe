@@ -1,2 +1,2 @@
-# passenger_wsgi.py
-from app import MyApp as application
+import myproject.wsgi
+application = myproject.wsgi.application
