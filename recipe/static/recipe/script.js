@@ -28,11 +28,10 @@ $(document).ready(function(){
     newLCListener();
     newTFWListner();
 
-    $('.accordion').next('.recipe').hide();
+    $('.recipes-wrapper').find('.recipe').hide();
 
     $('.recipes-wrapper').click(function() {
-        var el = $(this).children().first();
-        console.log(el);
+        var el = $(this).find('.recipe');
         if(el.hasClass("off")){
             el.slideDown();
             el.removeClass("off");
